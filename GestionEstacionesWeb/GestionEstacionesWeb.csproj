@@ -67,13 +67,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="RegistrarEstacion.aspx" />
+    <Content Include="RegistrarPuntoCarga.aspx" />
+    <Content Include="VerEstaciones.aspx" />
+    <Content Include="VerPuntosCarga.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarEstacion.aspx.cs">
+      <DependentUpon>RegistrarEstacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarEstacion.aspx.designer.cs">
+      <DependentUpon>RegistrarEstacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarPuntoCarga.aspx.cs">
+      <DependentUpon>RegistrarPuntoCarga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarPuntoCarga.aspx.designer.cs">
+      <DependentUpon>RegistrarPuntoCarga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="VerEstaciones.aspx.cs">
+      <DependentUpon>VerEstaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerEstaciones.aspx.designer.cs">
+      <DependentUpon>VerEstaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerPuntosCarga.aspx.cs">
+      <DependentUpon>VerPuntosCarga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerPuntosCarga.aspx.designer.cs">
+      <DependentUpon>VerPuntosCarga.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

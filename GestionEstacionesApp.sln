@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1433
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionEstacionesWeb", "GestionEstacionesWeb\GestionEstacionesWeb.csproj", "{154BBA0E-878B-4419-AC98-8A2DC34C757F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionEstacionesModel", "GestionEstacionesModel\GestionEstacionesModel.csproj", "{146EE7D2-7F3C-4D44-8E15-DC8F917A8A22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{154BBA0E-878B-4419-AC98-8A2DC34C757F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{154BBA0E-878B-4419-AC98-8A2DC34C757F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{154BBA0E-878B-4419-AC98-8A2DC34C757F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{146EE7D2-7F3C-4D44-8E15-DC8F917A8A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{146EE7D2-7F3C-4D44-8E15-DC8F917A8A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{146EE7D2-7F3C-4D44-8E15-DC8F917A8A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{146EE7D2-7F3C-4D44-8E15-DC8F917A8A22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
