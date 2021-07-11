@@ -23,7 +23,7 @@
                             <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Estaciones
+                            <a class="nav-link dropdown-toggle" href="#" id="dd_estaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">Estaciones
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="VerEstaciones.aspx">Ver Estaciones</a></li>
@@ -31,7 +31,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Puntos de Carga
+                            <a class="nav-link dropdown-toggle" href="#" id="dd_puntos" role="button" data-bs-toggle="dropdown" aria-expanded="false">Puntos de Carga
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="VerPuntosCarga.aspx">Ver Puntos de Carga</a></li>

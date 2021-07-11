@@ -11,6 +11,6 @@ namespace GestionEstacionesModel.DAL
     {
         void Create(Estacion estacion);
         List<Estacion> ReadAll();
-        void Remove(Estacion estacion);
+        void Remove(int id);
     }
 }

@@ -39,7 +39,7 @@ namespace GestionEstacionesModel.DAL
 
         public List<PuntoCarga> ReadByTipo(string tipo)
         {
-            return puntosCarga.FindAll(p => p.Tipo.Equals(tipo));
+            return puntosCarga.FindAll(p => p.Tipo.ToString().Equals(tipo));
         }
 
         public void Update(PuntoCarga puntoCarga)

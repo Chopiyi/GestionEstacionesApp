@@ -8,7 +8,7 @@ namespace GestionEstacionesModel.DAL
 {
     public class EstacionesDALFactory
     {
-        public static IEstacionesDAL CreateDAO()
+        public static IEstacionesDAL CreateDAL()
         {
             return EstacionesDAL.GetInstance();
         }

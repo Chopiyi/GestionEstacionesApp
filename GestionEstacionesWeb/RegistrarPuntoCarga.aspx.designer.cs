@@ -22,6 +22,15 @@ namespace GestionEstacionesWeb {
         protected global::System.Web.UI.WebControls.TextBox capacidad_punto;
         
         /// <summary>
+        /// Control cv_capacidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cv_capacidad;
+        
+        /// <summary>
         /// Control fecha_vencimiento.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace GestionEstacionesWeb {
         protected global::System.Web.UI.WebControls.TextBox fecha_vencimiento;
         
         /// <summary>
+        /// Control cv_fecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cv_fecha;
+        
+        /// <summary>
         /// Control tipo_punto.
         /// </summary>
         /// <remarks>
@@ -38,6 +56,15 @@ namespace GestionEstacionesWeb {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList tipo_punto;
+        
+        /// <summary>
+        /// Control cv_tipo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cv_tipo;
         
         /// <summary>
         /// Control button_registrar.

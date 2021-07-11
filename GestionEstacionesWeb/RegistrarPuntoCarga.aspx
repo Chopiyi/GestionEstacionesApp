@@ -10,21 +10,25 @@
                 <div class="card-body">
                     <div class="mb-3">
                         <label for="capacidad_punto" class="form-label">Capcaidad Máxima</label>
-                        <asp:TextBox ID="capacidad_punto" CssClass="form-control" runat="server" type="number"></asp:TextBox>
-                        <asp:RequiredFieldValidator runat="server" ErrorMessage="Debes Ingresar la capacidad máxima" ControlToValidate="capacidad_punto" CssClass="text-danger">
-                        </asp:RequiredFieldValidator>
+                        <asp:TextBox ID="capacidad_punto" CssClass="form-control" runat="server" type="number" min="0"></asp:TextBox>
+                        <asp:CustomValidator ID="cv_capacidad" runat="server" ErrorMessage="CustomValidator" CssClass="text-danger"
+                            ControlToValidate="capacidad_punto" OnServerValidate="cv_capacidad_ServerValidate" ValidateEmptyText="true"></asp:CustomValidator>
                     </div>
                     <div class="mb-3">
                         <label for="fecha_vencimiento" class="form-label">Fecha de vencimiento</label>
                         <asp:TextBox ID="fecha_vencimiento" CssClass="form-control" runat="server" type="date"></asp:TextBox>
+                        <asp:CustomValidator ID="cv_fecha" runat="server" ErrorMessage="CustomValidator" CssClass="text-danger"
+                            ControlToValidate="fecha_vencimiento" OnServerValidate="cv_fecha_ServerValidate" ValidateEmptyText="true"></asp:CustomValidator>
                     </div>
                     <div class="mb-3">
                         <label for="tipo_punto" class="form-label">Tipo</label>
                         <asp:DropDownList ID="tipo_punto" runat="server" CssClass="form-select">
-                            <asp:ListItem Value="0" Selected="True" Text="Selecciona una opción"></asp:ListItem>
-                            <asp:ListItem Value="1" Text="Eléctrico"></asp:ListItem>
-                            <asp:ListItem Value="2" Text="Dual"></asp:ListItem>
+                            <asp:ListItem Value="nada" Selected="True" Text="Selecciona una opción"></asp:ListItem>
+                            <asp:ListItem Value="Eléctrico" Text="Eléctrico"></asp:ListItem>
+                            <asp:ListItem Value="Dual" Text="Dual"></asp:ListItem>
                         </asp:DropDownList>
+                        <asp:CustomValidator ID="cv_tipo" runat="server" ErrorMessage="CustomValidator" CssClass="text-danger"
+                            ControlToValidate="tipo_punto" OnServerValidate="cv_tipo_ServerValidate" ValidateEmptyText="true"></asp:CustomValidator>
                     </div>
                 </div>
                 <div class="card-footer bg-dark">

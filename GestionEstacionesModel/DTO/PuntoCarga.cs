@@ -8,7 +8,7 @@ namespace GestionEstacionesModel.DTO
 {
     public enum TipoPunto
     {
-        electrico, dual
+        Eléctrico, Dual
     }
 
     public class PuntoCarga

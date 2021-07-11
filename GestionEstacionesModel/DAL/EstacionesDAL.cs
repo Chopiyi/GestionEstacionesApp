@@ -37,9 +37,10 @@ namespace GestionEstacionesModel.DAL
             return estaciones;
         }
 
-        public void Remove(Estacion estacion)
+        public void Remove(int id)
         {
-            estaciones.Remove(estacion);
+
+            estaciones.Remove(estaciones.Find(e => e.IdEstacion == id));
         }
     }
 }
