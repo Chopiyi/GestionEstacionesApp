@@ -1,5 +1,5 @@
-﻿using GestionEstacionesModel.DAL;
-using GestionEstacionesModel.DTO;
+﻿using GestionEstacionesBD;
+using GestionEstacionesBD.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +20,6 @@ namespace GestionEstacionesWeb
                 CargarTabla(dal.ReadAll());
             }
         }
-
-        
 
         protected void CargarTabla(List<Estacion> estaciones)
         {

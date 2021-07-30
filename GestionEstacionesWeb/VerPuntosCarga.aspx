@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="VerPuntosCarga.aspx.cs" Inherits="GestionEstacionesWeb.VerPuntosCarga" %>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
     <div class="row justify-content-center mt-5">
         <div class="col-6 col-md-4 col-lg-2 mt-5">
@@ -11,7 +10,7 @@
         </div>
     </div>
     <div class="row justify-content-center mt-5 py-3">
-        <div class="col-10 col-md-6 col-lg-4 mt-4">
+        <div class="col-12 col-md-10 col-lg-8 mt-4">
             <asp:GridView ID="grid_puntos" runat="server" AutoGenerateColumns="false" EmptyDataText="No se han registrado Puntos de Carga"
                 CssClass="table table-hover table-striped table-info table-responsive" OnRowEditing="grid_puntos_RowEditing" OnRowCancelingEdit="grid_puntos_RowCancelingEdit"
                 OnRowUpdating="grid_puntos_RowUpdating">
@@ -39,7 +38,7 @@
                             <%# Eval("vencimiento") %>
                         </ItemTemplate>
                         <EditItemTemplate>
-                            <asp:TextBox ID="fecha_vencimiento" CssClass="form-control" runat="server" type="date"></asp:TextBox>
+                            <asp:TextBox ID="fecha_vencimiento" CssClass="form-control" runat="server" type="date" Text=<%# Eval("vencimiento") %>></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Debes ingresar la fecha"
                                 ControlToValidate="fecha_vencimiento"></asp:RequiredFieldValidator>
                         </EditItemTemplate>
@@ -56,6 +55,14 @@
                             </asp:DropDownList>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Selecciona una opción por favor"
                                 ControlToValidate="tipo_punto"></asp:RequiredFieldValidator>
+                        </EditItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Estacion">
+                        <ItemTemplate>
+                            <%# Eval("Estacion.idEstacion") %>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="estacion_punto" CssClass="form-control" runat="server" ReadOnly="true" Text=<%# Eval("Estacion.idEstacion") %>></asp:TextBox>
                         </EditItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Actualizar">

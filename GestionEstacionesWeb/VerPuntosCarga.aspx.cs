@@ -1,5 +1,5 @@
-﻿using GestionEstacionesModel.DAL;
-using GestionEstacionesModel.DTO;
+﻿using GestionEstacionesBD;
+using GestionEstacionesBD.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +12,7 @@ namespace GestionEstacionesWeb
     public partial class VerPuntosCarga : System.Web.UI.Page
     {
         private IPuntosCargaDAL dal = PuntosCargaDALFactory.CreateDAL();
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -63,18 +64,10 @@ namespace GestionEstacionesWeb
             string tipoTxt = ddlTipo.SelectedValue;
             int id = Convert.ToInt32(idField.Text.Trim());
             PuntoCarga punto = new PuntoCarga();
-            punto.IdPunto = id;
-            punto.CapacidadMax = capTxt;
-            punto.Vencimiento = DateTime.ParseExact(fechaTxt, "dd-MM-yyyy", null);
-            switch (tipoTxt)
-            {
-                case "Dual":
-                    punto.Tipo = TipoPunto.Dual;
-                    break;
-                case "Eléctrico":
-                    punto.Tipo = TipoPunto.Eléctrico;
-                    break;
-            }
+            punto.idPunto = id;
+            punto.capacidadMax = capTxt;
+            punto.vencimiento = DateTime.ParseExact(fechaTxt, "dd-MM-yyyy", null).Date;
+            punto.tipo = tipoTxt;
             dal.Update(punto);
             grid_puntos.EditIndex = -1;
             CargarTabla(dal);

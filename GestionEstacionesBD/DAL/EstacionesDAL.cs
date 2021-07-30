@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GestionEstacionesModel.DTO;
 
-namespace GestionEstacionesModel.DAL
+namespace GestionEstacionesBD.DAL
 {
     public class EstacionesDAL : IEstacionesDAL
     {
-        private static List<Estacion> estaciones = new List<Estacion>();
+        public estaciones_bdEntities entities = new estaciones_bdEntities();
 
         private EstacionesDAL()
         {
@@ -20,7 +19,7 @@ namespace GestionEstacionesModel.DAL
 
         public static IEstacionesDAL GetInstance()
         {
-            if(instance == null)
+            if (instance == null)
             {
                 instance = new EstacionesDAL();
             }
@@ -29,18 +28,20 @@ namespace GestionEstacionesModel.DAL
 
         public void Create(Estacion estacion)
         {
-            estaciones.Add(estacion);
+            entities.Estacion.Add(estacion);
+            entities.SaveChanges();
         }
 
         public List<Estacion> ReadAll()
         {
-            return estaciones;
+            return entities.Estacion.ToList();
         }
 
         public void Remove(int id)
         {
-
-            estaciones.Remove(estaciones.Find(e => e.IdEstacion == id));
+            Estacion e = entities.Estacion.Find(id);
+            entities.Estacion.Remove(e);
+            entities.SaveChanges();
         }
     }
 }

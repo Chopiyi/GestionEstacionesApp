@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegistrarPuntoCarga.aspx.cs" Inherits="GestionEstacionesWeb.RegistrarPuntoCarga" %>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
     <div class="row my-5 justify-content-center">
         <div class="col-10 col-md-6 col-lg-4">
@@ -29,6 +28,14 @@
                         </asp:DropDownList>
                         <asp:CustomValidator ID="cv_tipo" runat="server" ErrorMessage="CustomValidator" CssClass="text-danger"
                             ControlToValidate="tipo_punto" OnServerValidate="cv_tipo_ServerValidate" ValidateEmptyText="true"></asp:CustomValidator>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ddl_estaciones" class="form-label">Estación</label>
+                        <asp:DropDownList ID="ddl_estaciones" runat="server" CssClass="form-select">
+                            
+                        </asp:DropDownList>
+                        <asp:CustomValidator ID="cv_estaciones" runat="server" ErrorMessage="CustomValidator" CssClass="text-danger"
+                            ControlToValidate="ddl_estaciones" OnServerValidate="cv_estaciones_ServerValidate"></asp:CustomValidator>
                     </div>
                 </div>
                 <div class="card-footer bg-dark">

@@ -67,6 +67,24 @@ namespace GestionEstacionesWeb {
         protected global::System.Web.UI.WebControls.CustomValidator cv_tipo;
         
         /// <summary>
+        /// Control ddl_estaciones.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_estaciones;
+        
+        /// <summary>
+        /// Control cv_estaciones.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cv_estaciones;
+        
+        /// <summary>
         /// Control button_registrar.
         /// </summary>
         /// <remarks>

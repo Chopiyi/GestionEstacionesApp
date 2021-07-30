@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GestionEstacionesModel.DTO;
 
-namespace GestionEstacionesModel.DAL
+namespace GestionEstacionesBD.DAL
 {
-    public class PuntosCargaDAL : IPuntosCargaDAL
+    public class PuntosCargaDAL :IPuntosCargaDAL
     {
-        private static List<PuntoCarga> puntosCarga = new List<PuntoCarga>();
+        public estaciones_bdEntities entities = new estaciones_bdEntities();
 
         private PuntosCargaDAL()
         {
@@ -20,7 +19,7 @@ namespace GestionEstacionesModel.DAL
 
         public static IPuntosCargaDAL GetInstance()
         {
-            if(instance == null)
+            if (instance == null)
             {
                 instance = new PuntosCargaDAL();
             }
@@ -29,23 +28,27 @@ namespace GestionEstacionesModel.DAL
 
         public void Create(PuntoCarga puntoCarga)
         {
-            puntosCarga.Add(puntoCarga);
+            entities.PuntoCarga.Add(puntoCarga);
+            entities.SaveChanges();
         }
 
         public List<PuntoCarga> ReadAll()
         {
-            return puntosCarga;
+            return entities.PuntoCarga.ToList();
         }
 
         public List<PuntoCarga> ReadByTipo(string tipo)
         {
-            return puntosCarga.FindAll(p => p.Tipo.ToString().Equals(tipo));
+            return entities.PuntoCarga.ToList().FindAll(p => p.tipo == tipo);
         }
 
         public void Update(PuntoCarga puntoCarga)
         {
-            puntosCarga.Remove(puntosCarga.Find(p => p.IdPunto == puntoCarga.IdPunto));
-            puntosCarga.Add(puntoCarga);
+            PuntoCarga punto = entities.PuntoCarga.Where(p => p.idPunto == puntoCarga.idPunto).First();
+            punto.tipo = puntoCarga.tipo;
+            punto.capacidadMax = puntoCarga.capacidadMax;
+            punto.vencimiento = puntoCarga.vencimiento;
+            entities.SaveChanges();
         }
     }
 }
